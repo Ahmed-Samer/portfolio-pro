@@ -20,10 +20,10 @@ export const metadata: Metadata = {
 
   //  لتحسين شكل اللينك عند مشاركته على السوشيال ميديا Open Graph Tags
   openGraph: {
-    title: "اسمك الكامل | مطور ويب خبير",
+    title: "Ahmed_Samer | مطور ويب خبير",
     description: "ألق نظرة على أعمالي وخبرتي في تطوير الويب.",
-    url: 'https://your-domain.com', // لما ترفع الموقع، حط الرابط هنا
-    siteName: 'Ahmed_Samer Portfolio',
+    url: 'https://portfolio-pro-1.vercel.app/', // لما ترفع الموقع، حط الرابط هنا
+    siteName: 'portfolio-pro',
     images: [
       {
         url: '/og-image.png',
