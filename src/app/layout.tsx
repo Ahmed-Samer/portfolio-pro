@@ -3,24 +3,30 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer"; // 1. استدعاء الفوتر
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// src/app/layout.tsx
-
 export const metadata: Metadata = {
-  title: "أحمد سمير كمال | مطور ويب خبير وباني أنظمة",
+  title: "اسمك الكامل | مطور ويب خبير وباني أنظمة",
   description: "بورتفوليو يعرض خبرتي في بناء تطبيقات ويب متقدمة قابلة للتوسع، متخصص في منصات التجارة الإلكترونية والحلول المخصصة.",
+  
+  // ---  هنا الحل ---
+  // بنعرف مسار الأيقونات بشكل صريح
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png', // أيقونة لأجهزة أبل
+  },
+
   //  لتحسين شكل اللينك عند مشاركته على السوشيال ميديا Open Graph Tags
   openGraph: {
-    title: "أحمد سمير كمال | مطور ويب خبير",
+    title: "اسمك الكامل | مطور ويب خبير",
     description: "ألق نظرة على أعمالي وخبرتي في تطوير الويب.",
     url: 'https://your-domain.com', // لما ترفع الموقع، حط الرابط هنا
-    siteName: 'AhmedSamerPortfolio',
+    siteName: 'اسمك الكامل',
     images: [
       {
-        url: '/og-image.png', // هنشرح دي تحت
+        url: '/og-image.png',
         width: 1200,
         height: 630,
       },
@@ -28,6 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,7 +45,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-gray-900 text-white flex flex-col min-h-screen`}>
         <Header />
         <main className="flex-grow">{children}</main>
-        <Footer /> {/* 2. وضع الفوتر هنا ليظهر في كل الصفحات */}
+        <Footer />
       </body>
     </html>
   );
