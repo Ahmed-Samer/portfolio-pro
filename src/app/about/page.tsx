@@ -1,11 +1,10 @@
 // src/app/about/page.tsx
-"use client";
+"use client"; // Important for animations
 
-import Link from 'next/link';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 import profileImage from './profile.jpg';
-import ContactForm from '@/components/ContactForm'; // 1. استدعاء مكون الفورم الجديد
+import ContactForm from '@/components/ContactForm';
 
 export default function AboutPage() {
   const skills = {
@@ -36,6 +35,7 @@ export default function AboutPage() {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 }
   };
+
 
   return (
     <div className="container mx-auto px-4 py-16 overflow-hidden">
@@ -119,7 +119,6 @@ export default function AboutPage() {
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             هل لديك فكرة مشروع أو ترغب في العمل معًا؟ املأ الفورم بالأسفل وسأقوم بالرد عليك في أقرب وقت.
           </p>
-          {/* 2. وضع مكون الفورم هنا */}
           <ContactForm />
        </motion.section>
     </div>
