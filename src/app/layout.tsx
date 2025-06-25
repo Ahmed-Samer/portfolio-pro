@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "اسمك الكامل | مطور ويب خبير",
     description: "ألق نظرة على أعمالي وخبرتي في تطوير الويب.",
     url: 'https://your-domain.com', // لما ترفع الموقع، حط الرابط هنا
-    siteName: 'اسمك الكامل',
+    siteName: 'Ahmed_Samer Portfolio',
     images: [
       {
         url: '/og-image.png',
