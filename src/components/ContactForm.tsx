@@ -51,7 +51,7 @@ export default function ContactForm() {
       } else {
         throw new Error('حدث خطأ أثناء إرسال الرسالة.');
       }
-    } catch (error) {
+    } catch (_error) { // <<<--- هنا التعديل، غيرنا 'error' إلى '_error'
       setSubmissionStatus({
         message: 'فشل إرسال الرسالة. برجاء المحاولة مرة أخرى.',
         type: 'error',
