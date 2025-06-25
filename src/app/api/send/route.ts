@@ -3,7 +3,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { z } from 'zod';
 
-const resend = new Resend();
+//  <<<--- هذا هو السطر الصحيح لبيئة Vercel
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactFormSchema = z.object({
   name: z.string().min(1, { message: 'الاسم مطلوب' }),
@@ -14,6 +15,7 @@ const contactFormSchema = z.object({
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
+
     const validation = contactFormSchema.safeParse(body);
 
     if (!validation.success) {
@@ -42,7 +44,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ message: 'تم إرسال الرسالة بنجاح!', data });
 
-  } catch (e) { //  <<<--- هنا التعديل، غيرنا 'error' إلى 'e'
+  } catch (e) {
     if (e instanceof Error) {
       return NextResponse.json({ error: e.message }, { status: 500 });
     }
