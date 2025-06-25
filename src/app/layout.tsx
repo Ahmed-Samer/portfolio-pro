@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "اسمك الكامل | مطور ويب خبير وباني أنظمة",
+  title: "Ahmed-Samer | مطور ويب خبير وباني أنظمة",
   description: "بورتفوليو يعرض خبرتي في بناء تطبيقات ويب متقدمة قابلة للتوسع، متخصص في منصات التجارة الإلكترونية والحلول المخصصة.",
   
   // ---  هنا الحل ---
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
   //  لتحسين شكل اللينك عند مشاركته على السوشيال ميديا Open Graph Tags
   openGraph: {
-    title: "Ahmed_Samer | مطور ويب خبير",
+    title: "Ahmed-Samer-Kamal | مطور ويب خبير",
     description: "ألق نظرة على أعمالي وخبرتي في تطوير الويب.",
     url: 'https://portfolio-pro-1.vercel.app/', // لما ترفع الموقع، حط الرابط هنا
     siteName: 'portfolio-pro',
